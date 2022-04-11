@@ -27,6 +27,8 @@ body {
 .row {
   /* ! */
   display: flex;
+  /* 이렇게 하면 row는 플렉스 요소가 되며 그 자식들은 플렉스아이템이되어
+  가로로 놓이게 됨 */
 }
 
 .key {
@@ -41,6 +43,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  /* 한줄로 더이상 담을 수 없을때 줄을 바꾼다는 설정 */
   transition: 0.2s;
   /* ! */
 }
@@ -126,6 +129,7 @@ body {
 .slider::before {
   position: absolute;
   content: "";
+  /* 가상요소에 내용을 넣으려면 content속성이 꼭 필요함 */
   height: 26px;
   width: 26px;
   left: 4px;
@@ -153,6 +157,8 @@ input:checked + .slider::before {
 .select-box select {
   /* ! */
   font-size: 0.9rem;
+  /* em은 제일 가까운 부모요소의 폰트사이즈의 퍼센트로 설정하고 */
+  /* rem은 root요소의 폰트사이즈의 퍼센트로 설정된다. */
   /* ! */
   padding: 2px 5px;
   height: 34px;
